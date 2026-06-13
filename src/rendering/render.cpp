@@ -101,7 +101,7 @@ void copy_line16(unsigned short* target, unsigned short* src, int count)
        (
           "cld\n"
           "rep\n"
-          "movsd\n"
+          "movsl\n"
           : "=c" (count), "=D" (dummy), "=S" (dummy)  // dummy values, because register is corrupted
           : "c" (count>>1), "S" (src), "D" (target)
           : "memory" );
@@ -118,7 +118,7 @@ void copy_line32(unsigned long* target, unsigned long* src, int count)
        (
           "cld\n"
           "rep\n"
-          "movsd\n"
+          "movsl\n"
           : "=c" (count), "=D" (dummy), "=S" (dummy)  // dummy values, because register is corrupted
           : "c" (count), "S" (src), "D" (target)
           : "memory" );
