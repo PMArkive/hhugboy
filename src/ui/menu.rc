@@ -25,13 +25,10 @@
 #include <windows.h>
 
 #include "menu.h"
-#include "../version.rc"
 
 ID_ICON ICON MOVEABLE DISCARDABLE "../hhugboy.ico"
 
 #include "dialogs.rc"
-#include "dialogs/MemorySearcher.rc"
-#include "dialogs/LinkerLog.rc"
 
 ID_MENU MENU 
 BEGIN
