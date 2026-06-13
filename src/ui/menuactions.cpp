@@ -733,9 +733,9 @@ void menuAction(int menuOption)
 
             if(!GB->gbc_mode || !GB->cartridge->header.CGB)
             {
-                memcpy(GB->GBC_BGP,LCD_palette_brown,sizeof(unsigned int)*4);
-                memcpy(GB->GBC_OBP,LCD_palette_brown,sizeof(unsigned int)*4);
-                memcpy(GB->GBC_OBP+4,LCD_palette_brown,sizeof(unsigned int)*4);
+                memcpy(GB->GBC_BGP,LCD_palette_brown,sizeof(unsigned short)*4);
+                memcpy(GB->GBC_OBP,LCD_palette_brown,sizeof(unsigned short)*4);
+                memcpy(GB->GBC_OBP+4,LCD_palette_brown,sizeof(unsigned short)*4);
             }
             break;
 
@@ -745,9 +745,9 @@ void menuAction(int menuOption)
 
             if(!GB->gbc_mode || !GB->cartridge->header.CGB)
             {
-                memcpy(GB->GBC_BGP,LCD_palette_green,sizeof(unsigned int)*4);
-                memcpy(GB->GBC_OBP,LCD_palette_green,sizeof(unsigned int)*4);
-                memcpy(GB->GBC_OBP+4,LCD_palette_green,sizeof(unsigned int)*4);
+                memcpy(GB->GBC_BGP,LCD_palette_green,sizeof(unsigned short)*4);
+                memcpy(GB->GBC_OBP,LCD_palette_green,sizeof(unsigned short)*4);
+                memcpy(GB->GBC_OBP+4,LCD_palette_green,sizeof(unsigned short)*4);
             }
             break;
 
@@ -757,9 +757,9 @@ void menuAction(int menuOption)
 
             if(!GB->gbc_mode || !GB->cartridge->header.CGB)
             {
-                memcpy(GB->GBC_BGP,GB_palette_gray,sizeof(unsigned int)*4);
-                memcpy(GB->GBC_OBP,GB_palette_gray,sizeof(unsigned int)*4);
-                memcpy(GB->GBC_OBP+4,GB_palette_gray,sizeof(unsigned int)*4);
+                memcpy(GB->GBC_BGP,GB_palette_gray,sizeof(unsigned short)*4);
+                memcpy(GB->GBC_OBP,GB_palette_gray,sizeof(unsigned short)*4);
+                memcpy(GB->GBC_OBP+4,GB_palette_gray,sizeof(unsigned short)*4);
             }
             break;
 
