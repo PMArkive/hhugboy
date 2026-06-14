@@ -3,6 +3,10 @@ project(hhugboy)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libgcc -static-libstdc++ -std=c++11 -mwindows")
 
+if (${CMAKE_BUILD_TYPE} STREQUAL Release)
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -s -Os")
+endif ()
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin")
 
 set(SOURCE_FILES
@@ -186,7 +190,11 @@ link_libraries(
         "${CMAKE_SOURCE_DIR}/libs/libz.a"
 )
 
-add_executable(hhugboy ${SOURCE_FILES})
-set_target_properties(hhugboy PROPERTIES LINKER_LANGUAGE CXX)
-add_executable(hhugboy-debug ${SOURCE_FILES})
-set_target_properties(hhugboy-debug PROPERTIES LINKER_LANGUAGE CXX)
+if (NOT ${CMAKE_BUILD_TYPE} STREQUAL Debug)
+        add_executable(hhugboy ${SOURCE_FILES})
+        set_target_properties(hhugboy PROPERTIES LINKER_LANGUAGE CXX)
+endif()
+if (${CMAKE_BUILD_TYPE} STREQUAL Debug)
+        add_executable(hhugboy-debug ${SOURCE_FILES})
+        set_target_properties(hhugboy-debug PROPERTIES LINKER_LANGUAGE CXX)
+endif()
