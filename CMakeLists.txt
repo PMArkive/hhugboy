@@ -39,6 +39,7 @@ set(SOURCE_FILES
         src/devices.h
         src/ui/dialogs.cpp
         src/ui/dialogs.h
+        src/ui/dialogs.rc
         src/directinput.cpp
         src/directinput.h
         src/GB.cpp

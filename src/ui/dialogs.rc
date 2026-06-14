@@ -20,6 +20,10 @@
    51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 */
 
+#include <windows.h>
+
+#include "dialogs.h"
+
 ID_DEBUG_DIALOG DIALOGEX 300, 0, 420, 420
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "hhugboy debug log"

@@ -28,8 +28,6 @@
 
 ID_ICON ICON MOVEABLE DISCARDABLE "../hhugboy.ico"
 
-#include "dialogs.rc"
-
 ID_MENU MENU 
 BEGIN
 	POPUP "&File"
